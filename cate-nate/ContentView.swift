@@ -13,8 +13,6 @@ struct ContentView: View {
     @State private var result: String = ""
     var body: some View {
         VStack {
-            Text("Cate-Nate")
-                .font(.title)
             Text("Escriba la primera frase: ")
                 .bold()
             TextField("String 1", text: $textInput)
@@ -28,7 +26,7 @@ struct ContentView: View {
                 .textInputAutocapitalization(.never)
                 .disableAutocorrection(true)
             Button {
-                result += textInput + " " + textInput2
+                result += textInput + textInput2
             } label: {
                 Text("Unir")
             }
